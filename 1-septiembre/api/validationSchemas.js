@@ -20,9 +20,17 @@ const paramyById = Joi.object({
   uid: Joi.string().required(),
 })
 
+const guest = Joi.object({
+  event_id: Joi.string().required(),
+  first_name: Joi.string().required(),
+  last_name: Joi.string().required(),
+  email_adress: Joi.string().required(),
+})
+
 module.exports = {
   events,
   gift,
   queryById,
   paramyById,
+  guest,
 }

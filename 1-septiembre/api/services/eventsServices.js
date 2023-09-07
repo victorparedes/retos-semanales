@@ -1,11 +1,10 @@
-const { v4: uuidv4 } = require('uuid')
 const { events } = require('./mockData.js')
+const { createEntity } = require('./common.js')
 
-const createEvent = (data) => ({ id: uuidv4(), ...data})
 const save = (newEvent) => events.push(newEvent)
 
 const create = (data)=>{
-    let newEvent = createEvent(data)
+    let newEvent = createEntity(data)
     save(newEvent)
     return newEvent
 }
