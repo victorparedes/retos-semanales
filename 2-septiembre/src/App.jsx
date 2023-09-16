@@ -1,6 +1,6 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import PokemonDetailPage from './pages/PokemonDetailPage';
-import PokemonListPage from "./pages/PokemonListPage";
+import PokemonDetailPage from './pages/PokemonDetailPage/PokemonDetailPage';
+import PokemonListPage from "./pages/PokemonListPage/PokemonListPage";
 import LayoutPage from "./pages/LayoutPage";
 
 const router = createBrowserRouter([
