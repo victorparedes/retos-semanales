@@ -1,0 +1,42 @@
+/* Estilos para el componente PokemonListPage */
+.pokemon-list-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Muestra 4 elementos por fila */
+    gap: 20px; /* Espacio entre los elementos */
+}
+  
+/* Estilos para el botón "Load More" si es necesario */
+button {
+    margin-top: 20px;
+}
+
+/* Estilos para el contenedor de la página */
+.page-container {
+    display: flex;
+    flex-direction: column; /* Apila los elementos verticalmente */
+    justify-content: flex-start; /* Alinea los elementos en la parte superior */
+    align-items: center; /* Centra horizontalmente */
+}  
+  
+/* Estilos para el input de búsqueda */
+.search-input {
+    width: 50%; /* Ocupa el 50% del ancho del contenedor */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none; /* Elimina el borde al enfocar el input */
+}
+  
+/* Estilos para cuando el input está enfocado */
+.search-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Estilos para el container del boton buscar mas */
+.load-more-container {
+    display: flex;
+    flex-direction: column; /* Apila los elementos verticalmente */
+    align-items: center; /* Centra horizontalmente */
+}  

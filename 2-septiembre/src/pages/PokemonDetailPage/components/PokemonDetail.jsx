@@ -1,9 +1,10 @@
 import getPokemonImageUrl from '../../common'
+import './PokemonDetail.css'
   
 const PokemonDetail = ({pokemon})=> {
     return (
       <article>
-        <h1>Nombre - {pokemon.name}</h1>
+        <h1>{pokemon.name}</h1>
         <img src={getPokemonImageUrl(pokemon)} />
         <h2>Habilidades</h2>
         <ul>

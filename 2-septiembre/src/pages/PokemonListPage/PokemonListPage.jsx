@@ -2,6 +2,7 @@ import Loading from "../../components/Loading"
 import PokemonItem from "./components/PokemonItem"
 import pokemonUseQuery from './usePokemonList'
 import { useState } from "react"
+import './PokemonListPage.css'; // Importa tus estilos CSS aquí
 
 const PokemonListPage = ()=> {
     const { loading, error, pokemonList, loadMorePokemon, findByName } = pokemonUseQuery()
@@ -16,21 +17,22 @@ const PokemonListPage = ()=> {
     
     return (
         <>
-          <div>
+          <div className="page-container">
               <input 
                 type="text" 
                 placeholder="Buscar por nombre" 
                 value={valor}
                 onChange={(e) => setValor(e.target.value)}
                 onKeyUp={handleClick}
+                className="search-input"
               />
           </div>
-          <div>
-            <ul>
-              {pokemonList.map((pokemon) => 
-                (<PokemonItem key={pokemon.id} pokemon={pokemon} />)
-              )}
-            </ul>
+          <div className="pokemon-list-grid" >
+            {pokemonList.map((pokemon) => 
+              (<PokemonItem key={pokemon.id} pokemon={pokemon} />)
+            )}
+          </div>
+          <div className="load-more-container">
             <button onClick={loadMorePokemon}>Load More</button>
           </div>
         </>
